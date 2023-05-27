@@ -1,0 +1,22 @@
+
+head{
+    background-color: black;
+    }
+
+body{
+    background-color: lightslategray;
+    }
+
+h1  {
+    font-size: 64px;
+    font-family: "Papyrus";
+    color: white;
+    text-align: center; 
+    } 
+
+nav a {
+    text-align: justify;
+    color: white;
+    width: max-content;
+}
+
