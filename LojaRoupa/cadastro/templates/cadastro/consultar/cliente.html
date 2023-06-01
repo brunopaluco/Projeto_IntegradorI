@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros</title>
+</head>
+<body>
+    <h1>Consulta de clientes</h1>
+    <a href="{% url 'cadastro-cliente' %}" class ='btn btn-primary btn-sm'>Adicionar Cliente</a>
+    <hr>
+    <div class="table-responsive">
+        <table class = 'table table-striped'>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>RG</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+            </tr>
+            
+            {% for info in object_list  %}
+            <tr>
+                <td>{{info.nome}}</td>
+                <td>{{info.cpf}}</td>
+                <td>{{info.rg}}</td>
+                <td>{{info.telefone}}</td>
+                <td>{{info.endereco}}</td>
+                <td>
+                    <a href="{% url 'editar-cliente' info.pk %}" class="btn btn-warning btn-sm" title="Editar">E</a>
+                    <a href="{% url 'excluir-cliente' info.pk %}" class="btn btn-warning btn-sm" title="Excluir">X</a>
+                </td>
+            </tr>
+
+            {% empty %}
+            <tr> 
+                <td colspan="5">Nenhum campo registrado.</td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+    </form>
+</body>
+</html>

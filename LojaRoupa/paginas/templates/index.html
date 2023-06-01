@@ -11,12 +11,35 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Bem vindos ao início.</h1>
-<nav>
-    <a href = "">Inicio</a>
-    <a href = "">Sobre</a>
-    <a href = "">Login</a>
-</nav>
-
+    <img src="{% static 'img/noiva-banner.jpg'%}" width="1350" height="420">
+    <nav id="mainnav">
+       <ul>
+            <li><a href = "{% url 'index' %}">Inicio</a></li>
+            <li><a href = "{% url 'about_us' %}">Sobre</a></li>
+            <li class="wrapper-dropdown">
+            <a href="#">Consulta</a>
+            <ul class="dropdown">
+                <li><a href="{% url 'listar-cliente' %}">Cliente</a></li>
+                <li><a href="{% url 'listar-locacao' %}">Locação</a></li>
+                <li><a href="{% url 'listar-contareceber' %}">Conta a Receber</a></li>
+            </ul>
+        </ul> 
+    </nav>
+    <div id="conteudo">
+    <p>O vestido de casamento ou 
+        vestido de noiva é o traje usado por uma noiva durante 
+        uma cerimônia de casamento. A cor, o estilo e a importância
+         cerimonial do vestido podem depender da religião e da cultura
+          dos participantes do casamento. Nas culturas ocidentais, 
+          as noivas geralmente escolhem o vestido de noiva branco, 
+          que foi popularizado pela Rainha Vitória no século XIX. 
+          Nos países do oriente é comum as noivas escolherem o 
+          vermelho para simbolizar prosperidade.
+        </p>
+    </div>
 </body>
+<footer>
+    <h6 style=text-align:center;color:black;>Todos os diretos autoriais são de responsabilidade de seus criadores</h6>
+</footer>
+
 </html>

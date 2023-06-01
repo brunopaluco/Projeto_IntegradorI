@@ -1,22 +1,51 @@
-
-head{
-    background-color: black;
-    }
-
 body{
     background-color: lightslategray;
     }
 
-h1  {
-    font-size: 64px;
-    font-family: "Papyrus";
-    color: white;
-    text-align: center; 
-    } 
-
-nav a {
-    text-align: justify;
-    color: white;
-    width: max-content;
+#mainnav{
+    background: #000;
 }
 
+#mainnav ul{
+    list-style:none;
+
+}
+#mainnav  ul li{
+    padding: 10px 15px;
+    background: #000;
+    display: inline-block ;
+}
+
+#mainnav ul li a {
+    text-decoration: none;
+    display:inline-block;
+}
+
+#mainnav ul ul{
+    display: none;
+    position:absolute;
+}
+
+#mainnav ul li:hover ul{
+    display:block;
+}
+#mainnav ul ul{
+    width: 150px;
+}
+#mainnav ul ul li a{
+    display: block;
+}
+
+#conteudo {
+    background: lightgray;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+}
+
+#conteudo p{
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'Arial';
+}
